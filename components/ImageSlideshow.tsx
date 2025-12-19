@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 
 const NUM_SLIDES = 4;
@@ -100,7 +101,7 @@ const ImageSlideshow: React.FC = () => {
 
     return (
         <div 
-            className="relative group aspect-[21/9] max-h-[400px] w-full shadow-lg bg-slate-200 rounded-lg overflow-hidden"
+            className="relative group aspect-[21/9] max-h-[400px] w-full shadow-xl bg-slate-100 rounded-xl overflow-hidden"
             onMouseEnter={resetTimeout}
             onMouseLeave={() => {
                 timeoutRef.current = setTimeout(
@@ -114,15 +115,15 @@ const ImageSlideshow: React.FC = () => {
                 <img src={currentImageSrc} alt={`Slide ${currentIndex + 1}`} className="w-full h-full object-cover transition-all duration-500" />
             ) : (
                 <div className="w-full h-full flex flex-col items-center justify-center text-center p-4">
-                    <p className="text-muted text-sm">{`/* Slide ${currentIndex + 1}: Abstract representation of interconnected telecom and aviation infrastructure */`}</p>
-                    <p className="text-muted text-xs mt-2 font-mono">Recommended: 1280x550px</p>
+                    <p className="text-muted text-lg">{`/* Slide ${currentIndex + 1}: Abstract representation of interconnected telecom and aviation infrastructure */`}</p>
+                    <p className="text-muted text-lg mt-2 font-mono">Recommended: 1280x550px</p>
                 </div>
             )}
 
             {/* Hover Controls */}
             <div className="absolute inset-0 bg-black/60 flex items-center justify-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button onClick={handleUploadClick} className="text-white text-xs bg-black/70 px-2 py-1 rounded hover:bg-black">Change</button>
-                {currentImageSrc && <button onClick={handleResetImage} className="text-white text-xs bg-black/70 px-2 py-1 rounded hover:bg-black">Reset</button>}
+                <button onClick={handleUploadClick} className="text-white text-lg bg-black/70 px-3 py-1.5 rounded hover:bg-black">Change</button>
+                {currentImageSrc && <button onClick={handleResetImage} className="text-white text-lg bg-black/70 px-3 py-1.5 rounded hover:bg-black">Reset</button>}
             </div>
 
             {/* Hidden File Input */}
@@ -138,7 +139,7 @@ const ImageSlideshow: React.FC = () => {
             <button onClick={goToPrevious} className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 focus:outline-none">
                 &#10094;
             </button>
-            <button onClick={goToNext} className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 focus:outline-none">
+            <button onClick={goToNext} className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 focus:opacity-100 focus:outline-none">
                 &#10095;
             </button>
 

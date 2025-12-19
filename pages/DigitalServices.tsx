@@ -1,9 +1,8 @@
-
 import React from 'react';
-import PageContainer from '../components/PageContainer';
+import ImageUpload from '../components/ImageUpload';
 
 const ServiceCard: React.FC<{ title: string; description: string; }> = ({ title, description }) => (
-    <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 h-full flex flex-col">
+    <div className="bg-surface p-6 rounded-xl shadow-lg border border-slate-200 hover:shadow-2xl hover:border-primary transition-all duration-300 ease-in-out h-full flex flex-col transform hover:-translate-y-1.5">
         <h3 className="text-xl font-medium font-heading text-primary">{title}</h3>
         <p className="mt-3 text-lg text-muted flex-grow">{description}</p>
     </div>
@@ -46,10 +45,9 @@ const DigitalServices: React.FC = () => {
   ];
     
   return (
-    <PageContainer>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="text-center">
-            <p className="text-base font-semibold text-secondary tracking-wide uppercase">Digital Services</p>
-            <h1 className="mt-2 text-4xl font-semibold font-heading text-text sm:text-5xl">
+            <h1 className="text-4xl font-semibold font-heading text-text sm:text-5xl">
                 Operational & Automation Platforms
             </h1>
             <p className="mt-6 text-xl text-muted max-w-4xl mx-auto">
@@ -57,12 +55,23 @@ const DigitalServices: React.FC = () => {
             </p>
         </div>
         
-        <div className="mt-16 max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            {offerings.map((offering) => (
-                <ServiceCard key={offering.title} title={offering.title} description={offering.description} />
-            ))}
+        <div className="mt-12">
+            <ImageUpload
+                storageKey="digital-services-main-image"
+                placeholderText="Image representing digital platforms or automation"
+                recommendedSize="1200x400px"
+                className="w-full h-64 md:h-80 lg:h-96 rounded-2xl"
+            />
         </div>
-    </PageContainer>
+
+        <div className="mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {offerings.map((offering) => (
+                    <ServiceCard key={offering.title} title={offering.title} description={offering.description} />
+                ))}
+            </div>
+        </div>
+    </div>
   );
 };
 

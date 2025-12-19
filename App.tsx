@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { Page } from './types';
 import Header from './components/Header';
@@ -41,7 +40,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen flex flex-col">
+    <div className="bg-bg text-text min-h-screen flex flex-col">
       <Header currentPage={currentPage} navigateTo={navigateTo} />
       <main className="flex-grow">
         {renderPage()}

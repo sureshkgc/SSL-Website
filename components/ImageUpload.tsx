@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 
 interface ImageUploadProps {
@@ -43,18 +44,18 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ storageKey, placeholderText, 
   };
 
   return (
-    <div className={`relative group bg-slate-200 rounded-lg overflow-hidden ${className}`}>
+    <div className={`relative group bg-slate-100 rounded-xl overflow-hidden shadow-lg ${className}`}>
       {imageSrc ? (
         <img src={imageSrc} alt={placeholderText} className="w-full h-full object-cover" />
       ) : (
         <div className="w-full h-full flex flex-col items-center justify-center text-center p-4">
-          <p className="text-muted text-sm">{`/* ${placeholderText} */`}</p>
-          <p className="text-muted text-xs mt-2 font-mono">Recommended: {recommendedSize}</p>
+          <p className="text-muted text-lg">{`/* ${placeholderText} */`}</p>
+          <p className="text-muted text-lg mt-2 font-mono">Recommended: {recommendedSize}</p>
         </div>
       )}
       <div className="absolute inset-0 bg-black/60 flex items-center justify-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <button onClick={handleUploadClick} className="text-white text-xs bg-black/70 px-2 py-1 rounded hover:bg-black">Change</button>
-        {imageSrc && <button onClick={handleResetImage} className="text-white text-xs bg-black/70 px-2 py-1 rounded hover:bg-black">Reset</button>}
+        <button onClick={handleUploadClick} className="text-white text-lg bg-black/70 px-3 py-1.5 rounded hover:bg-black">Change</button>
+        {imageSrc && <button onClick={handleResetImage} className="text-white text-lg bg-black/70 px-3 py-1.5 rounded hover:bg-black">Reset</button>}
       </div>
       <input
         type="file"

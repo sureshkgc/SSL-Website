@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PageContainer from '../components/PageContainer';
 
@@ -6,13 +5,12 @@ const About: React.FC = () => {
   return (
     <PageContainer>
       <div className="text-center">
-        <p className="text-base font-semibold text-secondary tracking-wide uppercase">About Us</p>
-        <h1 className="mt-2 text-4xl font-semibold font-heading text-text sm:text-5xl">
+        <h1 className="text-4xl font-semibold font-heading text-text sm:text-5xl">
           Pioneering Infrastructure Solutions
         </h1>
       </div>
       
-      <div className="mt-10 text-lg text-muted max-w-4xl mx-auto space-y-6 text-center">
+      <div className="mt-10 text-xl text-muted max-w-4xl mx-auto space-y-6 text-center">
         <p>
           Stratowave Solutions LLP delivers comprehensive infrastructure and digital
           solutions across telecom, aviation, drones, and digital ecosystems,
