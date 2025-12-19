@@ -112,7 +112,7 @@ const Aviation: React.FC = () => {
         <AviationSection 
             id="daas" 
             title="Drone as a Service (DaaS)"
-            description="Managed drone operations delivering actionable data and insights for enterprises and infrastructure owners."
+            description="Managed drone operations focused on safety, efficiency, and affordability—delivering intelligence-ready data powered by AI and computer vision for enterprises and infrastructure owners."
             imageComment="Insert image of drone inspecting power lines or infrastructure here"
             storageKey="aviation-daas-image"
             imagePosition="right"
@@ -120,7 +120,12 @@ const Aviation: React.FC = () => {
              <SubSection title="Use Cases: Energy & Infrastructure">
                 <CapabilityListItem>Transmission line inspection & solar/wind asset monitoring</CapabilityListItem>
                 <CapabilityListItem>Roads, bridges, corridors, rail & metro inspections</CapabilityListItem>
-                <CapabilityListItem>Construction progress tracking & volumetric analysis</CapabilityListItem>
+                <CapabilityListItem>Construction progress tracking & site surveys</CapabilityListItem>
+            </SubSection>
+            <SubSection title="Use Cases: Telecom & Mining">
+                <CapabilityListItem>Telecom tower and fiber route surveys</CapabilityListItem>
+                <CapabilityListItem>Telecom asset health inspection</CapabilityListItem>
+                <CapabilityListItem>Mine surveys, volumetric analysis, and stockpile management</CapabilityListItem>
             </SubSection>
             <SubSection title="Use Cases: Urban, Industrial & Emergency">
                 <CapabilityListItem>Smart city mapping & industrial plant inspections</CapabilityListItem>
