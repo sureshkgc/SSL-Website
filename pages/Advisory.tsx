@@ -35,6 +35,14 @@ const Advisory: React.FC = () => {
             description: "Delivering robust PMO services to oversee large-scale deployments, manage risks, and ensure projects are delivered on time and within budget."
         },
         {
+            title: "Contracts Management",
+            description: "Expert management of the entire contract lifecycle, from drafting and negotiation to execution and compliance, ensuring risk mitigation and value optimization."
+        },
+        {
+            title: "Revenue Management",
+            description: "Implementing comprehensive revenue assurance, billing, and financial management frameworks to prevent leakage, optimize pricing, and maximize profitability."
+        },
+        {
             title: "Government & PSU Engagement",
             description: "Facilitating strategic engagement with government bodies and Public Sector Undertakings (PSUs) to streamline approvals and foster collaboration."
         }

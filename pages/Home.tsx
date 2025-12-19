@@ -44,28 +44,28 @@ const FocusAreaCard: React.FC<{
 }> = ({ title, description, page, navigateTo, icon, storageKey }) => {
     return (
         <div 
-            onClick={() => navigateTo(page)}
-            className="group cursor-pointer rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 bg-surface overflow-hidden border border-slate-200"
+            className="group rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 bg-surface overflow-hidden border border-slate-200 flex flex-col"
         >
-            <div className="relative">
-                {/* Background Image */}
-                <div className="h-80">
-                    <ImageUpload
-                        storageKey={storageKey}
-                        placeholderText={`Image for ${title}`}
-                        recommendedSize="600x450px"
-                        className="w-full h-full"
-                    />
+            {/* Image Area for editing, not for navigation */}
+            <div className="h-72 relative">
+                <ImageUpload
+                    storageKey={storageKey}
+                    placeholderText={`Image for ${title}`}
+                    recommendedSize="600x450px"
+                    className="w-full h-full"
+                />
+            </div>
+            
+            {/* Content Box for navigation */}
+            <div 
+                onClick={() => navigateTo(page)}
+                className="p-6 pt-12 text-center bg-surface relative flex-grow cursor-pointer"
+            >
+                 <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 bg-accent rounded-full flex items-center justify-center border-4 border-surface shadow-lg pointer-events-none">
+                    {icon}
                 </div>
-                
-                {/* Content Box */}
-                <div className="p-6 pt-16 text-center bg-surface relative min-h-[12rem]">
-                     <div className="absolute left-1/2 -translate-x-1/2 -top-10 w-20 h-20 bg-accent rounded-full flex items-center justify-center border-4 border-surface shadow-lg">
-                        {icon}
-                    </div>
-                    <h3 className="text-2xl font-bold font-heading text-text">{title}</h3>
-                    <p className="mt-2 text-muted text-lg">{description}</p>
-                </div>
+                <h3 className="text-2xl font-bold font-heading text-text">{title}</h3>
+                <p className="mt-2 text-muted text-lg">{description}</p>
             </div>
         </div>
     );

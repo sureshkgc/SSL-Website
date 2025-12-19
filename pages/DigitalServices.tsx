@@ -35,6 +35,10 @@ const DigitalServices: React.FC = () => {
         description: "Bespoke applications designed to enhance operational control and user engagement."
     },
     {
+        title: "Call Center Automation",
+        description: "Enhance customer support with AI-powered voice agents, intelligent chatbots, and streamlined workflows for human agents."
+    },
+    {
         title: "Automation & Orchestration Platforms",
         description: "Powerful platforms to automate complex workflows and orchestrate services across diverse systems."
     },
