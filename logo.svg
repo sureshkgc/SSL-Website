@@ -1,0 +1,19 @@
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-label="Stratowave Solutions Logo">
+  <g fill="#0F172A">
+    <!-- Icon - circles with descending size -->
+    <circle cx="35" cy="27" r="18" />
+    <circle cx="35" cy="50" r="12" />
+    <circle cx="35" cy="73" r="8" />
+    
+    <!-- Separator line -->
+    <line x1="75" y1="10" x2="75" y2="90" stroke="#0F172A" stroke-width="2" />
+
+    <!-- Text elements -->
+    <text x="95" y="45" font-family="Poppins, sans-serif" font-size="35" font-weight="400">
+      Stratowave
+    </text>
+    <text x="95" y="85" font-family="Poppins, sans-serif" font-size="35" font-weight="400">
+      Solutions
+    </text>
+  </g>
+</svg>

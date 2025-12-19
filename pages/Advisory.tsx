@@ -1,0 +1,64 @@
+
+import React from 'react';
+import PageContainer from '../components/PageContainer';
+
+const AdvisoryCard: React.FC<{ title: string; description: string; }> = ({ title, description }) => (
+    <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 h-full flex flex-col">
+        <h3 className="text-xl font-medium font-heading text-primary">{title}</h3>
+        <p className="mt-3 text-lg text-muted flex-grow">{description}</p>
+    </div>
+);
+
+const Advisory: React.FC = () => {
+    const services = [
+        {
+            title: "Feasibility & DPR Preparation",
+            description: "Conducting comprehensive feasibility studies and preparing Detailed Project Reports (DPR) to establish project viability and support funding proposals."
+        },
+        {
+            title: "Regulatory & Compliance",
+            description: "Providing expert guidance to navigate complex regulatory landscapes and ensure full compliance with telecom, aviation, and government policies."
+        },
+        {
+            title: "Technology & Solution Design",
+            description: "Performing in-depth technology evaluations and creating vendor-agnostic solution designs to build optimal, future-ready infrastructure."
+        },
+        {
+            title: "Bid & Tender Management",
+            description: "Managing the end-to-end bid process, from drafting RFPs and tenders to evaluating proposals to secure the best partners."
+        },
+        {
+            title: "Technical Staffing & Resource Deployment",
+            description: "Deploying skilled technical professionals and subject matter experts to augment your teams and accelerate project execution."
+        },
+        {
+            title: "Project & Program Management",
+            description: "Delivering robust PMO services to oversee large-scale deployments, manage risks, and ensure projects are delivered on time and within budget."
+        },
+        {
+            title: "Government & PSU Engagement",
+            description: "Facilitating strategic engagement with government bodies and Public Sector Undertakings (PSUs) to streamline approvals and foster collaboration."
+        }
+    ];
+
+  return (
+    <PageContainer>
+      <div className="text-center">
+        <p className="text-base font-semibold text-secondary tracking-wide uppercase">ADVISORY</p>
+        <h1 className="mt-2 text-4xl font-semibold font-heading text-text sm:text-5xl">
+          Execution-Enabling Advisory Services
+        </h1>
+        <p className="mt-6 max-w-3xl mx-auto text-lg text-muted">
+          We provide execution-enabling advisory and program support services to navigate complex project landscapes and ensure successful outcomes.
+        </p>
+      </div>
+      <div className="mt-16 max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        {services.map(service => (
+            <AdvisoryCard key={service.title} title={service.title} description={service.description} />
+        ))}
+      </div>
+    </PageContainer>
+  );
+};
+
+export default Advisory;
